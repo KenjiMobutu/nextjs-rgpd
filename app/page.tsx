@@ -1,6 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 export default function LandingPage() {
+  const words =
+    "Générez vos documents RGPD conformes au droit belge en quelques clics avec RGPD Generator.";
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -8,19 +11,30 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 group cursor-pointer">
-              <span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">⚖️</span>
+              <span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">
+                ⚖️
+              </span>
               <span className="font-bold text-2xl bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
                 RGPD Generator
               </span>
             </div>
             <div className="flex items-center gap-6">
-              <Link href="#features" className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105">
+              <Link
+                href="#features"
+                className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105"
+              >
                 Fonctionnalités
               </Link>
-              <Link href="#pricing" className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105">
+              <Link
+                href="#pricing"
+                className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105"
+              >
                 Tarifs
               </Link>
-              <Link href="/auth" className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105">
+              <Link
+                href="/auth"
+                className="text-gray-700 hover:text-primary-600 font-medium transition-all duration-300 hover:scale-105"
+              >
                 Connexion
               </Link>
               <Link href="/auth?mode=signup" className="btn-primary">
@@ -43,19 +57,27 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-slideIn">
               <h1 className="text-6xl font-bold mb-6 leading-tight">
-                Générez vos documents RGPD en{' '}
-                <span className="bg-white/20 px-3 py-1 rounded-lg backdrop-blur">quelques clics</span>
+                Générez vos documents RGPD en{""}
+                <span className="bg-white/20 px-3 py-1 rounded-lg backdrop-blur">
+                  quelques clics
+                </span>
               </h1>
               <p className="text-xl mb-10 text-white/90 leading-relaxed">
-                CGV, Politique de Confidentialité, Mentions Légales conformes au droit belge.
-                Simple, rapide et professionnel.
+                CGV, Politique de Confidentialité, Mentions Légales conformes au
+                droit belge. Simple, rapide et professionnel.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/auth?mode=signup" className="group relative bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold shadow-2xl hover:shadow-2xl transition-all duration-300 text-center overflow-hidden hover:scale-105">
+                <Link
+                  href="/auth?mode=signup"
+                  className="group relative bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold shadow-2xl hover:shadow-2xl transition-all duration-300 text-center overflow-hidden hover:scale-105"
+                >
                   <span className="relative z-10">Commencer gratuitement</span>
                   <div className="absolute inset-0 bg-linear-to-r from-primary-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link href="#demo" className="group bg-white/10 backdrop-blur-xl text-white border-2 border-white/50 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 hover:border-white transition-all duration-300 text-center hover:scale-105 hover:shadow-2xl">
+                <Link
+                  href="#demo"
+                  className="group bg-white/10 backdrop-blur-xl text-white border-2 border-white/50 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 hover:border-white transition-all duration-300 text-center hover:scale-105 hover:shadow-2xl"
+                >
                   Voir la démo
                 </Link>
               </div>
@@ -79,6 +101,10 @@ export default function LandingPage() {
                 </div>
                 <div className="space-y-4">
                   <div className="h-5 bg-white/30 rounded-lg w-3/4 animate-pulse"></div>
+                  <TextGenerateEffect
+                    className="text-pink-500 dark:text-gray-50"
+                    words={words}
+                  />
                   <div className="h-5 bg-white/30 rounded-lg w-1/2 animate-pulse"></div>
                   <div className="h-5 bg-white/30 rounded-lg w-2/3 animate-pulse"></div>
                   <div className="h-5 bg-white/30 rounded-lg w-3/4 animate-pulse"></div>
@@ -102,61 +128,96 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-linear-to-b from-gray-50 to-white">
+      <section
+        id="features"
+        className="py-24 bg-linear-to-b from-gray-50 to-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-slideIn">
             <h2 className="text-5xl font-bold mb-6 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
               Pourquoi choisir RGPD Generator ?
             </h2>
-            <p className="text-2xl text-gray-600">Tout ce dont vous avez besoin pour être conforme</p>
+            <p className="text-2xl text-gray-600">
+              Tout ce dont vous avez besoin pour être conforme
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">⚡</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Rapide & Simple</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                ⚡
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Rapide & Simple
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Générez vos documents en moins de 5 minutes grâce à notre formulaire intelligent guidé.
+                Générez vos documents en moins de 5 minutes grâce à notre
+                formulaire intelligent guidé.
               </p>
             </div>
 
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🇧🇪</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Conforme au droit belge</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                🇧🇪
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Conforme au droit belge
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Documents conformes au RGPD européen et adaptés aux spécificités juridiques belges.
+                Documents conformes au RGPD européen et adaptés aux spécificités
+                juridiques belges.
               </p>
             </div>
 
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎯</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Adapté à votre activité</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                🎯
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Adapté à votre activité
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Coach, SaaS, E-commerce, Formateur... Des modèles personnalisés pour chaque secteur.
+                Coach, SaaS, E-commerce, Formateur... Des modèles personnalisés
+                pour chaque secteur.
               </p>
             </div>
 
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">📄</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Tous vos documents</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                📄
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Tous vos documents
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                CGV, Politique de Confidentialité, Mentions Légales, Politique de Cookies en un seul endroit.
+                CGV, Politique de Confidentialité, Mentions Légales, Politique
+                de Cookies en un seul endroit.
               </p>
             </div>
 
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💾</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Export PDF instantané</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                💾
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Export PDF instantané
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Téléchargez vos documents en PDF professionnel ou copiez-les directement.
+                Téléchargez vos documents en PDF professionnel ou copiez-les
+                directement.
               </p>
             </div>
 
             <div className="card text-center group hover:shadow-2xl hover:border-primary-200">
-              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🔄</div>
-              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Mises à jour incluses</h3>
+              <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                🔄
+              </div>
+              <h3 className="text-2xl font-bold mb-3 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Mises à jour incluses
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Restez à jour avec l'évolution de la législation, sans effort supplémentaire.
+                Restez à jour avec l'évolution de la législation, sans effort
+                supplémentaire.
               </p>
             </div>
           </div>
@@ -180,9 +241,12 @@ export default function LandingPage() {
                   1
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Choisissez votre activité</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                Choisissez votre activité
+              </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Sélectionnez le type d'entreprise qui correspond à votre activité.
+                Sélectionnez le type d'entreprise qui correspond à votre
+                activité.
               </p>
             </div>
 
@@ -193,9 +257,12 @@ export default function LandingPage() {
                   2
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Remplissez le formulaire</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                Remplissez le formulaire
+              </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Complétez les informations en quelques minutes avec notre guide étape par étape.
+                Complétez les informations en quelques minutes avec notre guide
+                étape par étape.
               </p>
             </div>
 
@@ -206,9 +273,12 @@ export default function LandingPage() {
                   3
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Téléchargez vos documents</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+                Téléchargez vos documents
+              </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Obtenez instantanément vos documents conformes, prêts à être publiés.
+                Obtenez instantanément vos documents conformes, prêts à être
+                publiés.
               </p>
             </div>
           </div>
@@ -216,30 +286,43 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-linear-to-b from-gray-50 to-white">
+      <section
+        id="pricing"
+        className="py-24 bg-linear-to-b from-gray-50 to-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
               Tarifs simples et transparents
             </h2>
-            <p className="text-2xl text-gray-600">Choisissez le plan qui vous convient</p>
+            <p className="text-2xl text-gray-600">
+              Choisissez le plan qui vous convient
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <h3 className="text-3xl font-bold mb-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Starter</h3>
+              <h3 className="text-3xl font-bold mb-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Starter
+              </h3>
               <div className="mb-8">
-                <span className="text-5xl font-bold bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">29€</span>
+                <span className="text-5xl font-bold bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  29€
+                </span>
                 <span className="text-gray-600 text-xl">/mois</span>
               </div>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Jusqu'à 3 documents / mois</span>
+                  <span className="text-gray-700">
+                    Jusqu'à 3 documents / mois
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Tous les types de documents</span>
+                  <span className="text-gray-700">
+                    Tous les types de documents
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
@@ -250,7 +333,10 @@ export default function LandingPage() {
                   <span className="text-gray-700">Support email</span>
                 </li>
               </ul>
-              <Link href="/auth?mode=signup&plan=starter" className="btn-primary w-full text-center block">
+              <Link
+                href="/auth?mode=signup&plan=starter"
+                className="btn-primary w-full text-center block"
+              >
                 Commencer
               </Link>
             </div>
@@ -259,19 +345,27 @@ export default function LandingPage() {
               <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-linear-to-r from-primary-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                 ⭐ Populaire
               </div>
-              <h3 className="text-3xl font-bold mb-4 mt-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Pro</h3>
+              <h3 className="text-3xl font-bold mb-4 mt-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Pro
+              </h3>
               <div className="mb-8">
-                <span className="text-5xl font-bold bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">79€</span>
+                <span className="text-5xl font-bold bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                  79€
+                </span>
                 <span className="text-gray-600 text-xl">/mois</span>
               </div>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700 font-medium">Documents illimités</span>
+                  <span className="text-gray-700 font-medium">
+                    Documents illimités
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Tous les types de documents</span>
+                  <span className="text-gray-700">
+                    Tous les types de documents
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
@@ -283,22 +377,33 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Mises à jour automatiques</span>
+                  <span className="text-gray-700">
+                    Mises à jour automatiques
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Personnalisation avancée</span>
+                  <span className="text-gray-700">
+                    Personnalisation avancée
+                  </span>
                 </li>
               </ul>
-              <Link href="/auth?mode=signup&plan=pro" className="btn-primary w-full text-center block">
+              <Link
+                href="/auth?mode=signup&plan=pro"
+                className="btn-primary w-full text-center block"
+              >
                 Commencer
               </Link>
             </div>
 
             <div className="card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <h3 className="text-3xl font-bold mb-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">Enterprise</h3>
+              <h3 className="text-3xl font-bold mb-4 bg-linear-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                Enterprise
+              </h3>
               <div className="mb-8">
-                <span className="text-3xl font-bold text-gray-800">Sur mesure</span>
+                <span className="text-3xl font-bold text-gray-800">
+                  Sur mesure
+                </span>
               </div>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start gap-3">
@@ -307,7 +412,9 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
-                  <span className="text-gray-700">Comptes multi-utilisateurs</span>
+                  <span className="text-gray-700">
+                    Comptes multi-utilisateurs
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 text-2xl">✓</span>
@@ -326,7 +433,10 @@ export default function LandingPage() {
                   <span className="text-gray-700">Formation incluse</span>
                 </li>
               </ul>
-              <a href="mailto:contact@rgpdgenerator.be" className="btn-secondary w-full text-center block">
+              <a
+                href="mailto:contact@rgpdgenerator.be"
+                className="btn-secondary w-full text-center block"
+              >
                 Nous contacter
               </a>
             </div>
@@ -347,10 +457,14 @@ export default function LandingPage() {
             Prêt à vous mettre en conformité ?
           </h2>
           <p className="text-2xl mb-10 text-white/90 leading-relaxed">
-            Rejoignez des centaines d'entrepreneurs belges qui nous font confiance
+            Rejoignez des centaines d'entrepreneurs belges qui nous font
+            confiance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/auth?mode=signup" className="group relative inline-block bg-white text-primary-600 px-10 py-5 rounded-xl font-bold text-lg shadow-2xl hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105">
+            <Link
+              href="/auth?mode=signup"
+              className="group relative inline-block bg-white text-primary-600 px-10 py-5 rounded-xl font-bold text-lg shadow-2xl hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105"
+            >
               <span className="relative z-10">Commencer gratuitement</span>
               <div className="absolute inset-0 bg-linear-to-r from-primary-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
@@ -368,13 +482,16 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6 group cursor-pointer">
-                <span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">⚖️</span>
+                <span className="text-3xl transform group-hover:scale-110 transition-transform duration-300">
+                  ⚖️
+                </span>
                 <span className="font-bold text-2xl bg-linear-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
                   RGPD Generator
                 </span>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                La solution SaaS pour vos documents légaux conformes au RGPD et au droit belge.
+                La solution SaaS pour vos documents légaux conformes au RGPD et
+                au droit belge.
               </p>
             </div>
 
@@ -382,17 +499,26 @@ export default function LandingPage() {
               <h4 className="font-bold text-lg mb-6 text-white">Produit</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#features" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#features"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Fonctionnalités
                   </Link>
                 </li>
                 <li>
-                  <Link href="#pricing" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#pricing"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Tarifs
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Documentation
                   </Link>
                 </li>
@@ -403,17 +529,30 @@ export default function LandingPage() {
               <h4 className="font-bold text-lg mb-6 text-white">Ressources</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <a
+                    href="https://www.autoriteprotectiondonnees.be"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     APD Belgique
                   </a>
                 </li>
                 <li>
-                  <a href="https://economie.fgov.be" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <a
+                    href="https://economie.fgov.be"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     SPF Économie
                   </a>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Guide RGPD
                   </Link>
                 </li>
@@ -424,17 +563,26 @@ export default function LandingPage() {
               <h4 className="font-bold text-lg mb-6 text-white">Légal</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     CGV
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Politique de confidentialité
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
                     Mentions légales
                   </Link>
                 </li>
@@ -446,12 +594,10 @@ export default function LandingPage() {
             <p className="text-gray-400 text-lg">
               &copy; 2025 RGPD Generator - Tous droits réservés
             </p>
-            <p className="text-gray-500 mt-2">
-              Fait avec ❤️ en Belgique
-            </p>
+            <p className="text-gray-500 mt-2">Fait avec ❤️ en Belgique</p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
